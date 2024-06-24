@@ -1,0 +1,36 @@
+:root {
+    scroll-behavior: smooth;
+
+    --background-clr: hsl(306, 0%, 20%);
+    --header-bg-clr: hsl(306, 56%, 50%);
+    --accent-clr1: hsl(306, 97%, 10%);
+    --accent-clr2: hsl(306, 82%, 36%);
+    --light-pink: hsl(306, 35%, 95%);
+    --nav-text-clr: white;
+    --light-text: hsl(306, 32%, 88%);
+
+    --drop-shadow: 0 0 100px black;
+
+    --wave-hero-color: hsl(306, 35%, 71%);
+    --wave-vision-color: hsl(336, 35%, 71%);
+    --wave-works-color: hsl(6, 35%, 71%);
+    --wave-contact-color: hsl(36, 35%, 71%);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+    --background-clr: hsl(0, 0%, 79%);
+    --accent-clr1: hsl(306, 97%, 80%);
+    --accent-clr2: hsl(306, 82%, 90%);
+    --header-bg-clr: hsl(306, 56%, 50%);
+    --light-pink: hsl(306, 35%, 30%);
+    --nav-text-clr: black;
+    --light-text: hsl(306, 32%, 15%);
+    --light-pink: hsl(306, 35%, 5%);
+
+    --wave-hero-color: hsl(306, 35%, 40%);
+    --wave-vision-color: hsl(336, 35%, 40%);
+    --wave-works-color: hsl(6, 35%, 40%);
+    --wave-contact-color: hsl(36, 35%, 40%);
+}
+}

@@ -1,0 +1,59 @@
+@media only screen and (max-height: 630px) {
+    
+    #nav-bar {
+        position: absolute;
+    }
+
+    .page {
+        grid-template-rows: 1fr 7fr 1fr;
+    }
+
+    #first-article {
+        padding: 8svh
+    }
+
+    article {
+        grid-area: 2;
+    }
+    
+    .bottom-btn-ctnr {
+        grid-area: 3;
+        align-items: start;
+    }
+
+    .top-btn-ctnr {
+        grid-area: 1;
+        align-items: end;
+    }
+
+}
+
+@media only screen and (max-height: 570px) {
+    
+    #nav-bar {
+        position: absolute;
+    }
+
+    .page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #first-article {
+        padding: 8svh
+    }
+
+    article {
+        grid-area: 2;
+    }
+
+    .btn-ctnr {
+        display: none;
+    }
+    
+    .arrow-svg {
+        display: none;
+    }
+
+}

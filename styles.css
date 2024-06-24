@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Chivo Mono', sans-serif;
+}
+
+body {
+    background-color: var(--background-clr);
+    overflow-x: hidden;
+}
+
+#nav-blur {
+    z-index: 8;
+    width: 100%;
+    height: 100svh;
+    mask: linear-gradient(var(--background-clr), hsla(0, 0%, 100%, 0.9) 5%, hsla(0, 100%, 50%, 0) 50%, hsla(0, 0%, 100%, 0.9) 95%, var(--background-clr));
+    position: fixed;
+    backdrop-filter: blur(7px) contrast(150%);
+    overflow: hidden;
+}
+
+#side-wave-ctn {
+    height: 100svh;
+    position: fixed;
+}
+
+#side-wave {
+    height: 100%;
+    width:auto;
+    /* color: var(--light-pink); */
+    opacity: 50%;
+    transform: scalex(1);
+    transform-origin: left;
+    overflow: visible;
+    transition: transform 2s ease, color 2s ease;
+}
+
+/* SEPARATE NAV-BLUR AND NAV-BAR TO CREATE SEPARATE Z-INDEX CONTEXTS, SO THAT PAGE ARROWS CAN MAYBE WORK ALONG WITH NAV BAR */
+
+#nav-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 15px 5px 15px;
+    /* backdrop-filter: blur(8px); */
+    overflow: hidden;
+}
+
+/* By changing each 'fill' attribute in the paths of the SVGs to "currentcolor", we can change their color via the CSS color property */
+
+.subnav {
+    flex-grow: 1;
+}
+.nav-svg:hover {
+    transform: scale(105%);
+}
+
+.nav-svg {
+    height: 30px;
+    width: auto;
+    transition: transform 400ms ease-in-out
+}
+
+a {
+   color: currentColor;
+   text-decoration: none;
+}
+
+.nav-bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    color: var(--light-text);
+    border: solid transparent 2px;
+    border-radius: 5px;
+    transition: color 400ms ease-in-out, background-color 400ms ease-in-out, border-color 400ms ease;
+}
+
+.nav-bar-item:hover {
+    color: var(--nav-text-clr);
+}
+
+#hero-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-logo {
+    width: 60px;
+    height: auto;
+}
+
+#settings-cog {
+    height: 570%;
+    width: auto;
+}
+
+#utilities:hover #settings-cog {
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+
+#hero {
+    user-select: none;
+    background-image: linear-gradient(var(--header-bg-clr), var(--background-clr));
+}
+
+.page {
+    display: grid;
+    grid-template-rows: 1fr 1fr 7fr 1fr;
+    width: 100%;
+    height: 100svh;
+    transition: opacity 200ms ease;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 8svh;
+    align-items: left;
+    justify-content: center;
+    grid-area: 3;
+}
+
+#first-article {
+    align-items: center;
+    justify-content: start;
+    padding: 0;
+}
+
+#title {
+    z-index: 1;
+    font-size: 20vw;
+    width: 100%;
+    background: -webkit-linear-gradient(var(--accent-clr1) -40%, var(--background-clr) 50%, var(--accent-clr2) 140%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+}
+
+.question-mark {
+    background: var(--accent-clr1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+}
+
+#subheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: var(--light-pink);
+    font-size: 2rem;
+}
+
+.btn-ctnr {
+    z-index: 9;
+    display: flex;
+    justify-content: right;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 50svh;
+}
+
+/* Properties marked as important to override animation */
+
+.arrow-button:hover .arrow-svg {
+    opacity: 100% !important;
+    color: var(--nav-text-clr) !important;
+}
+
+.bottom-btn-ctnr {
+    grid-area: 4;
+    align-items: start;
+}
+
+.top-btn-ctnr {
+    grid-area: 2;
+    align-items: end;
+}
+
+.up-arrow-button {
+    transform: rotate(180deg);
+}
+
+.arrow-svg {
+    height: 50px;
+    width: auto;
+    color: hsl(305, 11%, 42%);
+    transition: opacity 2s ease;
+}
+
+hr {
+    z-index: 1;
+    border: none;
+    border-top: 1rem dashed var(--accent-clr2);
+}
+
+main {
+    margin: 4rem 0;
+    word-spacing: 6px;
+    letter-spacing: 4px;
+    line-height: 29px;
+    overflow-x: hidden;
+}
+
+p {
+    width: 60ch;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--light-pink);
+    text-shadow: var(--drop-shadow);
+    backdrop-filter: contrast(150%) blur(40px);
+}
+
