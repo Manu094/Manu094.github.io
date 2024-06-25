@@ -1,9 +1,9 @@
 :root {
     scroll-behavior: smooth;
 
-    --background-clr: hsl(306, 0%, 20%);
-    --header-bg-clr: hsl(306, 56%, 50%);
-    --accent-clr1: hsl(306, 97%, 10%);
+    --background-clr: hsl(0, 0%, 20%);
+    --header-bg-clr: #c738b9;
+    --accent-clr1: hsl(306, 96%, 10%);
     --accent-clr2: hsl(306, 82%, 36%);
     --light-pink: hsl(306, 35%, 95%);
     --nav-text-clr: white;
@@ -15,6 +15,9 @@
     --wave-vision-color: hsl(336, 35%, 71%);
     --wave-works-color: hsl(6, 35%, 71%);
     --wave-contact-color: hsl(36, 35%, 71%);
+
+    --text-select-clr: var(--accent-clr1);
+    --text-select-bg-clr: var(--light-text);
 }
 
 @media (prefers-color-scheme: light) {
@@ -32,5 +35,9 @@
     --wave-vision-color: hsl(336, 35%, 40%);
     --wave-works-color: hsl(6, 35%, 40%);
     --wave-contact-color: hsl(36, 35%, 40%);
+
+    --text-select-clr: var(--background-clr);
+    --text-select-bg-clr: var(--light-text);
+
 }
 }

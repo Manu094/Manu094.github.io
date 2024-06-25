@@ -18,6 +18,7 @@ body {
     position: fixed;
     backdrop-filter: blur(7px) contrast(150%);
     overflow: hidden;
+    pointer-events: none;
 }
 
 #side-wave-ctn {
@@ -231,3 +232,15 @@ p {
     backdrop-filter: contrast(150%) blur(40px);
 }
 
+p::selection {
+    color: var(--text-select-clr);
+    background-color: var(--text-select-bg-clr);
+}
+
+.wavelet1 {
+    filter: brightness(110%) contrast(120%);
+}
+
+.wavelet2 {
+    filter: brightness(140%) contrast(120%);
+}
