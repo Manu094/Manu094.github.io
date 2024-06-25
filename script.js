@@ -65,7 +65,7 @@ const observer = new IntersectionObserver(entries => {
       resetTitleColor(entry)
     }
   })
-}, { threshold: [0.7]})
+}, { threshold: [0.3]})
 
 
 

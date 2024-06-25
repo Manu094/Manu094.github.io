@@ -14,7 +14,7 @@ body {
     z-index: 8;
     width: 100%;
     height: 100svh;
-    mask: linear-gradient(var(--background-clr), hsla(0, 0%, 100%, 0.9) 5%, hsla(0, 100%, 50%, 0) 50%, hsla(0, 0%, 100%, 0.9) 95%, var(--background-clr));
+    mask: linear-gradient(var(--background-clr), hsla(0, 0%, 100%, 0.9) 0%, hsla(0, 100%, 50%, 0) 40%, hsla(0, 100%, 50%, 0) 60%, hsla(0, 0%, 100%, 0.9) 100%, var(--background-clr));
     position: fixed;
     backdrop-filter: blur(7px) contrast(150%);
     overflow: hidden;
@@ -52,24 +52,6 @@ body {
 
 /* By changing each 'fill' attribute in the paths of the SVGs to "currentcolor", we can change their color via the CSS color property */
 
-.subnav {
-    flex-grow: 1;
-}
-.nav-svg:hover {
-    transform: scale(105%);
-}
-
-.nav-svg {
-    height: 30px;
-    width: auto;
-    transition: transform 400ms ease-in-out
-}
-
-a {
-   color: currentColor;
-   text-decoration: none;
-}
-
 .nav-bar-item {
     display: flex;
     align-items: center;
@@ -85,6 +67,26 @@ a {
     color: var(--nav-text-clr);
 }
 
+.nav-svg {
+    height: 30px;
+    width: auto;
+    transition: transform 400ms ease-in-out
+}
+
+.nav-svg:hover {
+    transform: scale(105%);
+}
+
+.subnav {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+a {
+   color: currentColor;
+   text-decoration: none;
+}
+
 #hero-logo {
     display: flex;
     align-items: center;
@@ -97,8 +99,8 @@ a {
 }
 
 #settings-cog {
-    height: 570%;
-    width: auto;
+    width: 40px;
+    height: auto;
 }
 
 #utilities:hover #settings-cog {
@@ -109,13 +111,14 @@ a {
 #hero {
     user-select: none;
     background-image: linear-gradient(var(--header-bg-clr), var(--background-clr));
+    overflow: hidden;
 }
 
 .page {
     display: grid;
     grid-template-rows: 1fr 1fr 7fr 1fr;
     width: 100%;
-    height: 100svh;
+    min-height: 100svh;
     transition: opacity 200ms ease;
 }
 
@@ -132,6 +135,7 @@ article {
     align-items: center;
     justify-content: start;
     padding: 0;
+    overflow: visible;
 }
 
 #title {
@@ -145,6 +149,11 @@ article {
     font-style: italic;
     display: flex;
     justify-content: center;
+    overflow: visible;
+}
+
+#subtitle {
+    width: 80%;
 }
 
 .question-mark {
@@ -155,15 +164,11 @@ article {
     font-style: normal;
 }
 
-#subheader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 h2 {
     color: var(--light-pink);
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .btn-ctnr {
@@ -216,6 +221,7 @@ hr {
 }
 
 main {
+    width: 100%;
     margin: 4rem 0;
     word-spacing: 6px;
     letter-spacing: 4px;
@@ -239,8 +245,10 @@ p::selection {
 
 .wavelet1 {
     filter: brightness(110%) contrast(120%);
+    transform: translatex(-1px);
 }
 
 .wavelet2 {
     filter: brightness(140%) contrast(120%);
+    transform: translatex(-1px);
 }

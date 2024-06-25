@@ -1,6 +1,8 @@
 :root {
     scroll-behavior: smooth;
 
+    --title-bounce-height: -30px;
+
     --background-clr: hsl(0, 0%, 20%);
     --header-bg-clr: #c738b9;
     --accent-clr1: hsl(306, 96%, 10%);
