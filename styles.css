@@ -142,10 +142,10 @@ article {
     z-index: 1;
     font-size: 20vw;
     width: 100%;
-    background: -webkit-linear-gradient(var(--accent-clr1) -40%, var(--background-clr) 50%, var(--accent-clr2) 140%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* background: -webkit-linear-gradient(var(--accent-clr1) -40%, var(--background-clr) 50%, var(--accent-clr2) 140%); */
+    /* background-clip: text; */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
     font-style: italic;
     display: flex;
     justify-content: center;
